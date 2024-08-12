@@ -1,7 +1,5 @@
 import SwiftUI
 
-// TODO: (Flavian) - Add animation on deck removing
-// TODO: (Flavian) - Add animation on deck setup
 // TODO: (Flavian) - Add a UI new game timer
 // TODO: (Flavian) - Add a 2 players mode
 // TODO: (Flavian) - Add more sounds
@@ -9,12 +7,15 @@ import SwiftUI
 class Deck: ObservableObject {
     @AppStorage("bestMoveCount") private var bestMoveCount = 0
 
-    @Published var cards: [Card]
     @Published var canRevealCards = true
+    @Published var cards: [Card]
+    @Published var deckOpacity: Double = 1
+    @Published var isDealingCards = false
     @Published var player = Player()
 
     private var numberOfPairs: Int
 
+    // FIXME: (Flavian) - number of pairs cant be > 8
     init(numberOfPairs: Int) {
         self.numberOfPairs = numberOfPairs
 
@@ -58,8 +59,6 @@ class Deck: ObservableObject {
         cards[chosenIndex].isRevealed.toggle()
 
         checkMatchIsOver()
-
-        self.canRevealCards = true
     }
 
     private func checkMatchIsOver() {
@@ -78,6 +77,8 @@ class Deck: ObservableObject {
                 self.player.incrementMoveCount()
                 notficationFeedback.notificationOccurred(.error)
             }
+
+            self.canRevealCards = true
         }
     }
 
@@ -109,8 +110,22 @@ class Deck: ObservableObject {
     }
 
     private func resetGame() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.deckOpacity = 1
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
             self.initDeck()
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+            self.isDealingCards = true
+            self.deckOpacity = 1
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5 + Double(self.cards.count) * 0.2) {
+            self.isDealingCards = false
+            self.deckOpacity = 0
         }
     }
 

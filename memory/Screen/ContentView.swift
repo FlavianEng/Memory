@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var soundManager: SoundManager
-    @StateObject var deck = Deck(numberOfPairs: 1)
+    @StateObject var deck = Deck(numberOfPairs: 8)
 
     var body: some View {
         MoveCounterView(player: deck.player)

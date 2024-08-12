@@ -4,6 +4,7 @@ import SwiftUI
 // TODO: (Flavian) - Find a way to notify user the successful pair
 struct CardView: View {
     let card: Card
+    var canBeRevealed = true
 
     var cardSize: CGFloat {
         return (UIScreen.main.bounds.size.width / 5) - 20
@@ -23,10 +24,10 @@ struct CardView: View {
                 }
                 .rotationEffect(.degrees(card.rotation))
                 .rotation3DEffect(
-                    .degrees(card.isRevealed || card.isMatched ? 90 : 0),
+                    .degrees(canBeRevealed && (card.isRevealed || card.isMatched) ? 90 : 0),
                     axis: (x: 0.0, y: 1.0, z: 0.0)
                 )
-                .scaleEffect(card.isRevealed || card.isMatched ? 0.8 : 1)
+                .scaleEffect(canBeRevealed && (card.isRevealed || card.isMatched) ? 0.8 : 1)
                 .animation(card.isRevealed || card.isMatched ? .easeInOut : .easeInOut.delay(0.35), value: card.isRevealed)
 
             Image(card.imageName)
@@ -40,9 +41,9 @@ struct CardView: View {
                         .frame(width: cardSize, height: cardSize)
                 }
                 .rotationEffect(.degrees(card.rotation))
-                .scaleEffect(card.isRevealed || card.isMatched ? 1 : 0.8)
+                .scaleEffect(canBeRevealed && (card.isRevealed || card.isMatched) ? 1 : 0.8)
                 .rotation3DEffect(
-                    .degrees(card.isRevealed || card.isMatched ? 0 : -90),
+                    .degrees(canBeRevealed && (card.isRevealed || card.isMatched) ? 0 : -90),
                     axis: (x: 0.0, y: 1.0, z: 0.0)
                 )
                 .animation(card.isRevealed || card.isMatched ? .easeInOut.delay(0.35) : .easeInOut, value: card.isRevealed)
