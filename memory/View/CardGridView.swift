@@ -4,8 +4,8 @@ struct CardGridView: View {
     @EnvironmentObject var soundManager: SoundManager
     @ObservedObject var deck: Deck
 
-    @State private var offsets: [(x: CGFloat, y: CGFloat)] = Array(repeating: (0, 0), count: 16)
-    @State private var cardCenters: [CGPoint] = Array(repeating: .zero, count: 16)
+    @State private var offsets: [(x: CGFloat, y: CGFloat)]
+    @State private var cardCenters: [CGPoint]
     @State private var deckCenter = CGPoint()
 
     var cardSize: CGFloat {
@@ -14,6 +14,12 @@ struct CardGridView: View {
 
     private let lineSize = 4
     private let cardSpacing: CGFloat = 15
+
+    init(deck: Deck) {
+        self.deck = deck
+        _offsets = State(initialValue: Array(repeating: (0, 0), count: deck.cards.count))
+        _cardCenters = State(initialValue: Array(repeating: .zero, count: deck.cards.count))
+    }
 
     private func calculateOffsets() {
         cardCenters.enumerated().forEach { index, center in
@@ -24,7 +30,6 @@ struct CardGridView: View {
         }
     }
 
-    // TODO: (Flavian) - Check on iPad how the grid behaves
     var body: some View {
         // MARK: - Grid
         ZStack {
@@ -83,7 +88,7 @@ struct CardGridView: View {
                             }
                         )
                 }
-                .padding(.bottom, 100)
+                .padding(.bottom, 50)
             }
             .opacity(deck.deckOpacity)
             .onAppear(perform: {
