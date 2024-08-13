@@ -3,6 +3,7 @@ import SwiftUI
 // TODO: (Flavian) - Add a UI new game timer
 // TODO: (Flavian) - Add a 2 players mode
 // TODO: (Flavian) - Add more sounds
+// TODO: (Flavian) - Add 3 modes (difficulty / time) with different amount of pairs (18 max - calculates with the height of the screen)
 
 class Deck: ObservableObject {
     @AppStorage("bestMoveCount") private var bestMoveCount = 0
@@ -15,24 +16,12 @@ class Deck: ObservableObject {
 
     private var numberOfPairs: Int
 
-    // FIXME: (Flavian) - number of pairs cant be > 8
     init(numberOfPairs: Int) {
-        self.numberOfPairs = numberOfPairs
+        self.numberOfPairs = 0
+        self.cards = []
 
-        var uniqueCardsNumber = Set<Int>()
-
-        while uniqueCardsNumber.count != numberOfPairs {
-            uniqueCardsNumber.insert(Int.random(in: 1...18))
-        }
-
-        cards = []
-
-        uniqueCardsNumber.forEach { cardNumber in
-            cards.append(Card(number: cardNumber))
-            cards.append(Card(number: cardNumber))
-        }
-
-        cards = cards.shuffled()
+        setNumberOfPairs(numberOfPairs: numberOfPairs)
+        initDeck()
     }
 
     func choose(_ card: Card, soundManager: SoundManager) {
@@ -61,6 +50,7 @@ class Deck: ObservableObject {
         checkMatchIsOver()
     }
 
+    // TODO: (Flavian) - Move into a game class
     private func checkMatchIsOver() {
         if cards.allSatisfy({$0.isMatched}) {
             saveBestMove()
@@ -92,6 +82,8 @@ class Deck: ObservableObject {
         }
     }
 
+    // TODO: (Flavian) - Improves unique card number selection by removing from array the index taken
+    // TODO: (Flavian) - Automatically get the max uniqueCardsNumber
     private func initDeck() {
         var uniqueCardsNumber = Set<Int>()
 
@@ -109,6 +101,7 @@ class Deck: ObservableObject {
         cards = cards.shuffled()
     }
 
+    // TODO: (Flavian) - Move into a game class
     private func resetGame() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.deckOpacity = 1
@@ -129,9 +122,18 @@ class Deck: ObservableObject {
         }
     }
 
+    // TODO: (Flavian) - Move into a game class
     private func saveBestMove() {
         if player.moveCount < bestMoveCount {
             bestMoveCount = player.moveCount
         }
+    }
+
+    private func setNumberOfPairs(numberOfPairs: Int) {
+        guard numberOfPairs <= 18 else {
+            fatalError("Number of pairs is too high")
+        }
+
+        self.numberOfPairs = numberOfPairs
     }
 }

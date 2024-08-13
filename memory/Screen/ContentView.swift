@@ -1,5 +1,6 @@
 import SwiftUI
 
+// TODO: (Flavian) - Check on iPad how the grid behaves (and other views)
 struct ContentView: View {
     @EnvironmentObject var soundManager: SoundManager
     @StateObject var deck = Deck(numberOfPairs: 8)
