@@ -8,12 +8,8 @@ struct CardGridView: View {
     @State private var cardCenters: [CGPoint]
     @State private var deckCenter = CGPoint()
 
-    var cardSize: CGFloat {
-        return (UIScreen.main.bounds.size.width / 5) - 20
-    }
-
     private let lineSize = 4
-    private let cardSpacing: CGFloat = 15
+    private let cardSpacing: CGFloat = UIScreen.main.bounds.size.width / 20
 
     init(deck: Deck) {
         self.deck = deck
@@ -33,7 +29,7 @@ struct CardGridView: View {
     var body: some View {
         // MARK: - Grid
         ZStack {
-            LazyVGrid(columns: Array(repeating: GridItem(.adaptive(minimum: 50)), count: lineSize), alignment: .center, spacing: cardSpacing) {
+            LazyVGrid(columns: Array(repeating: GridItem(.flexible(minimum: 5)), count: lineSize), alignment: .center, spacing: cardSpacing) {
                 ForEach(deck.cards) { card in
                     CardView(card: card)
                         .onTapGesture {
@@ -106,6 +102,6 @@ struct CardGridView: View {
 }
 
 #Preview {
-    CardGridView(deck: Deck(numberOfPairs: 1))
+    CardGridView(deck: Deck(numberOfPairs: 8))
         .environmentObject(SoundManager())
 }

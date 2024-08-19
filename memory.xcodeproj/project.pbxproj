@@ -11,6 +11,7 @@
 		2D32E3CD2C62645E00E6163B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32E3CC2C62645E00E6163B /* ContentView.swift */; };
 		2D32E3CF2C62645F00E6163B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D32E3CE2C62645F00E6163B /* Assets.xcassets */; };
 		2D32E3D22C62645F00E6163B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D32E3D12C62645F00E6163B /* Preview Assets.xcassets */; };
+		2D38A6DE2C73838000BC4C45 /* NewGameTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D38A6DD2C73838000BC4C45 /* NewGameTimerView.swift */; };
 		2D99442D2C651DCB004F3A9D /* fail.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D9944282C651DCB004F3A9D /* fail.wav */; };
 		2D99442E2C651DCB004F3A9D /* flip-2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D9944292C651DCB004F3A9D /* flip-2.wav */; };
 		2D99442F2C651DCB004F3A9D /* flip-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D99442A2C651DCB004F3A9D /* flip-1.wav */; };
@@ -33,6 +34,7 @@
 		2D32E3CE2C62645F00E6163B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D32E3D12C62645F00E6163B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2D32E3D82C62660900E6163B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2D38A6DD2C73838000BC4C45 /* NewGameTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameTimerView.swift; sourceTree = "<group>"; };
 		2D9944282C651DCB004F3A9D /* fail.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fail.wav; sourceTree = "<group>"; };
 		2D9944292C651DCB004F3A9D /* flip-2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "flip-2.wav"; sourceTree = "<group>"; };
 		2D99442A2C651DCB004F3A9D /* flip-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "flip-1.wav"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				2DEA9D4B2C626E1800D3E85A /* CardGridView.swift */,
 				2DEA9D4E2C62729500D3E85A /* CardView.swift */,
 				2DFAACFD2C68B5F600BEB1E6 /* MoveCounterView.swift */,
+				2D38A6DD2C73838000BC4C45 /* NewGameTimerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				2DEA9D512C627C1000D3E85A /* Deck.swift in Sources */,
 				2DFAACFE2C68B5F600BEB1E6 /* MoveCounterView.swift in Sources */,
 				2DEA9D4F2C62729500D3E85A /* CardView.swift in Sources */,
+				2D38A6DE2C73838000BC4C45 /* NewGameTimerView.swift in Sources */,
 				2DFAACFC2C68B53500BEB1E6 /* Player.swift in Sources */,
 				2D32E3CB2C62645E00E6163B /* memoryApp.swift in Sources */,
 			);

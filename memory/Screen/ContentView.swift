@@ -1,19 +1,27 @@
 import SwiftUI
 
-// TODO: (Flavian) - Check on iPad how the grid behaves (and other views)
 struct ContentView: View {
     @EnvironmentObject var soundManager: SoundManager
     @StateObject var deck = Deck(numberOfPairs: 8)
 
     var body: some View {
-        MoveCounterView(player: deck.player)
+        ZStack {
+            VStack {
+                MoveCounterView(player: deck.player)
 
-        Spacer()
+                Spacer()
 
-        CardGridView(deck: deck)
-            .environmentObject(soundManager)
+                CardGridView(deck: deck)
+                    .environmentObject(soundManager)
 
-        Spacer()
+                Spacer()
+            }
+            .blur(radius: deck.newGameTimer > 0 ? 4 : 0)
+
+            if deck.newGameTimer > 0 {
+                NewGameTimerView(deck: deck)
+            }
+        }
     }
 }
 

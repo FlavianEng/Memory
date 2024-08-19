@@ -13,6 +13,7 @@ struct MoveCounterView: View {
 
         }
         .foregroundStyle(.frost)
+        .font(.title2)
 
         HStack(spacing: 0) {
             Text("Best: ")
@@ -22,7 +23,7 @@ struct MoveCounterView: View {
 
         }
         .foregroundStyle(.yellow.opacity(0.8))
-        .font(.caption)
+        .font(.title3)
     }
 }
 

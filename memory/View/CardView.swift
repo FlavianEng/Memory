@@ -1,12 +1,15 @@
 import SwiftUI
 
-// TODO: (Flavian) - Find to improve the way to notify visually user the successful pair
 struct CardView: View {
     let card: Card
     var canBeRevealed = true
 
     var cardSize: CGFloat {
-        return (UIScreen.main.bounds.size.width / 5) - 20
+        let baseWidth: CGFloat = 1179 // iPhone 15 Pro's width
+        let scalingFactor = UIScreen.main.bounds.size.width / baseWidth
+        let consistentSize = (baseWidth / 6) * scalingFactor
+
+        return consistentSize
     }
 
     var body: some View {

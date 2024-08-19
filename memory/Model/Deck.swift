@@ -1,10 +1,5 @@
 import SwiftUI
 
-// TODO: (Flavian) - Add a UI new game timer
-// TODO: (Flavian) - Add a 2 players mode
-// TODO: (Flavian) - Add more sounds
-// TODO: (Flavian) - Add 3 modes (difficulty / time) with different amount of pairs (18 max - calculates with the height of the screen)
-
 class Deck: ObservableObject {
     @AppStorage("bestMoveCount") private var bestMoveCount = 0
 
@@ -13,6 +8,7 @@ class Deck: ObservableObject {
     @Published var deckOpacity: Double = 1
     @Published var isDealingCards = false
     @Published var player = Player()
+    @Published var newGameTimer: Double = 0
 
     private var numberOfPairs: Int
 
@@ -54,7 +50,10 @@ class Deck: ObservableObject {
     private func checkMatchIsOver() {
         if cards.allSatisfy({$0.isMatched}) {
             saveBestMove()
-            resetGame()
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.resetGame()
+            }
         }
     }
 
@@ -103,20 +102,23 @@ class Deck: ObservableObject {
 
     // TODO: (Flavian) - Move into a game class
     private func resetGame() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        newGameTimer = 3
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.8) {
             self.deckOpacity = 1
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.1) {
             self.initDeck()
+            self.newGameTimer = 0
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
             self.isDealingCards = true
             self.deckOpacity = 1
         }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5 + Double(self.cards.count) * 0.2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5 + Double(self.cards.count) * 0.2) {
             self.isDealingCards = false
             self.deckOpacity = 0
         }
