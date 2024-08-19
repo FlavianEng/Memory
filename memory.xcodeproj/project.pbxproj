@@ -20,6 +20,7 @@
 		2D9944342C651E6B004F3A9D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9944332C651E6B004F3A9D /* Constant.swift */; };
 		2D9944362C651E76004F3A9D /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9944352C651E76004F3A9D /* SoundManager.swift */; };
 		2DA776292C73E02300387B34 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA776282C73E02300387B34 /* CreditsView.swift */; };
+		2DA7762B2C73E9E900387B34 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2DA7762A2C73E9E200387B34 /* README.md */; };
 		2DEA9D4C2C626E1800D3E85A /* CardGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA9D4B2C626E1800D3E85A /* CardGridView.swift */; };
 		2DEA9D4F2C62729500D3E85A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA9D4E2C62729500D3E85A /* CardView.swift */; };
 		2DEA9D512C627C1000D3E85A /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA9D502C627C1000D3E85A /* Deck.swift */; };
@@ -44,6 +45,7 @@
 		2D9944332C651E6B004F3A9D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		2D9944352C651E76004F3A9D /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		2DA776282C73E02300387B34 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		2DA7762A2C73E9E200387B34 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2DEA9D4B2C626E1800D3E85A /* CardGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGridView.swift; sourceTree = "<group>"; };
 		2DEA9D4E2C62729500D3E85A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		2DEA9D502C627C1000D3E85A /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 		2D32E3C92C62645E00E6163B /* memory */ = {
 			isa = PBXGroup;
 			children = (
+				2DA7762A2C73E9E200387B34 /* README.md */,
 				2D32E3D82C62660900E6163B /* Info.plist */,
 				2D32E3CA2C62645E00E6163B /* memoryApp.swift */,
 				2D32E3DA2C62668100E6163B /* View */,
@@ -218,6 +221,7 @@
 				2D9944312C651DCB004F3A9D /* success.wav in Resources */,
 				2D32E3D22C62645F00E6163B /* Preview Assets.xcassets in Resources */,
 				2D32E3CF2C62645F00E6163B /* Assets.xcassets in Resources */,
+				2DA7762B2C73E9E900387B34 /* README.md in Resources */,
 				2D99442E2C651DCB004F3A9D /* flip-2.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
