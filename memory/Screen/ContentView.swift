@@ -4,8 +4,19 @@ struct ContentView: View {
     @EnvironmentObject var soundManager: SoundManager
     @StateObject var deck = Deck(numberOfPairs: 8)
 
+    @State private var isCreditsDisplayed: Bool = false
+
     var body: some View {
         ZStack {
+            VStack {
+                HStack {
+                    Spacer()
+                    CreditsView(isPresented: $isCreditsDisplayed)
+                }
+                Spacer()
+            }
+            .padding(.trailing, 20)
+
             VStack {
                 MoveCounterView(player: deck.player)
 

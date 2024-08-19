@@ -19,6 +19,7 @@
 		2D9944312C651DCB004F3A9D /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D99442C2C651DCB004F3A9D /* success.wav */; };
 		2D9944342C651E6B004F3A9D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9944332C651E6B004F3A9D /* Constant.swift */; };
 		2D9944362C651E76004F3A9D /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9944352C651E76004F3A9D /* SoundManager.swift */; };
+		2DA776292C73E02300387B34 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA776282C73E02300387B34 /* CreditsView.swift */; };
 		2DEA9D4C2C626E1800D3E85A /* CardGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA9D4B2C626E1800D3E85A /* CardGridView.swift */; };
 		2DEA9D4F2C62729500D3E85A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA9D4E2C62729500D3E85A /* CardView.swift */; };
 		2DEA9D512C627C1000D3E85A /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA9D502C627C1000D3E85A /* Deck.swift */; };
@@ -42,6 +43,7 @@
 		2D99442C2C651DCB004F3A9D /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
 		2D9944332C651E6B004F3A9D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		2D9944352C651E76004F3A9D /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		2DA776282C73E02300387B34 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		2DEA9D4B2C626E1800D3E85A /* CardGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGridView.swift; sourceTree = "<group>"; };
 		2DEA9D4E2C62729500D3E85A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		2DEA9D502C627C1000D3E85A /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
@@ -86,7 +88,6 @@
 				2D32E3D92C62667800E6163B /* Screen */,
 				2D32E3DB2C62668A00E6163B /* Model */,
 				2D9944272C651D9D004F3A9D /* Sound */,
-				2DEA9D4D2C62700C00D3E85A /* Extension */,
 				2D9944322C651E57004F3A9D /* Utility */,
 				2D32E3CE2C62645F00E6163B /* Assets.xcassets */,
 				2D32E3D02C62645F00E6163B /* Preview Content */,
@@ -117,6 +118,7 @@
 				2DEA9D4E2C62729500D3E85A /* CardView.swift */,
 				2DFAACFD2C68B5F600BEB1E6 /* MoveCounterView.swift */,
 				2D38A6DD2C73838000BC4C45 /* NewGameTimerView.swift */,
+				2DA776282C73E02300387B34 /* CreditsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -150,13 +152,6 @@
 				2D9944352C651E76004F3A9D /* SoundManager.swift */,
 			);
 			path = Utility;
-			sourceTree = "<group>";
-		};
-		2DEA9D4D2C62700C00D3E85A /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +238,7 @@
 				2DFAACFE2C68B5F600BEB1E6 /* MoveCounterView.swift in Sources */,
 				2DEA9D4F2C62729500D3E85A /* CardView.swift in Sources */,
 				2D38A6DE2C73838000BC4C45 /* NewGameTimerView.swift in Sources */,
+				2DA776292C73E02300387B34 /* CreditsView.swift in Sources */,
 				2DFAACFC2C68B53500BEB1E6 /* Player.swift in Sources */,
 				2D32E3CB2C62645E00E6163B /* memoryApp.swift in Sources */,
 			);
