@@ -53,6 +53,7 @@ class Deck: ObservableObject {
 
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.resetGame()
+                self.resetScore()
             }
         }
     }
@@ -125,8 +126,13 @@ class Deck: ObservableObject {
     }
 
     // TODO: (Flavian) - Move into a game class
+    private func resetScore() {
+        player.moveCount = 0
+    }
+
+    // TODO: (Flavian) - Move into a game class
     private func saveBestMove() {
-        if player.moveCount < bestMoveCount {
+        if player.moveCount < bestMoveCount || bestMoveCount == 0 {
             bestMoveCount = player.moveCount
         }
     }

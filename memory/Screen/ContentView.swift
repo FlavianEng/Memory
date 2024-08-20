@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var soundManager: SoundManager
-    @StateObject var deck = Deck(numberOfPairs: 8)
+    @StateObject var deck = Deck(numberOfPairs: 12)
 
     @State private var isCreditsDisplayed: Bool = false
 
