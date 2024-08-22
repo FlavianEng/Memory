@@ -46,8 +46,13 @@ struct CreditsView: View {
                         .fontWeight(.semibold)
 
                     Spacer()
+
+                    Text("Simple Memo is not affiliated with Ravensburger Digital GmbH")
+                        .font(.footnote)
+                        .fontWeight(.light)
                 }
                 .foregroundStyle(.frost)
+                .multilineTextAlignment(.center)
                 .padding(50)
                 .presentationDetents([.medium])
                 .presentationDragIndicator(.visible)
