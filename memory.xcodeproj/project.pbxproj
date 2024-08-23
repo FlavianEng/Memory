@@ -12,12 +12,50 @@
 		2D32E3CF2C62645F00E6163B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D32E3CE2C62645F00E6163B /* Assets.xcassets */; };
 		2D32E3D22C62645F00E6163B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D32E3D12C62645F00E6163B /* Preview Assets.xcassets */; };
 		2D38A6DE2C73838000BC4C45 /* NewGameTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D38A6DD2C73838000BC4C45 /* NewGameTimerView.swift */; };
+		2D5674CD2C77D26500667825 /* sound_19.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674B42C77D26400667825 /* sound_19.wav */; };
+		2D5674CE2C77D26500667825 /* sound_0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674B52C77D26400667825 /* sound_0.wav */; };
+		2D5674CF2C77D26500667825 /* sound_14.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674B62C77D26400667825 /* sound_14.wav */; };
+		2D5674D02C77D26500667825 /* sound_8.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674B72C77D26400667825 /* sound_8.wav */; };
+		2D5674D12C77D26500667825 /* sound_16.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674B82C77D26400667825 /* sound_16.wav */; };
+		2D5674D22C77D26500667825 /* sound_11.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674B92C77D26400667825 /* sound_11.wav */; };
+		2D5674D32C77D26500667825 /* sound_3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674BA2C77D26400667825 /* sound_3.wav */; };
+		2D5674D42C77D26500667825 /* sound_10.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674BB2C77D26400667825 /* sound_10.wav */; };
+		2D5674D52C77D26500667825 /* sound_4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674BC2C77D26400667825 /* sound_4.wav */; };
+		2D5674D62C77D26500667825 /* sound_5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674BD2C77D26400667825 /* sound_5.wav */; };
+		2D5674D72C77D26500667825 /* sound_15.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674BE2C77D26400667825 /* sound_15.wav */; };
+		2D5674D82C77D26500667825 /* sound_6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674BF2C77D26500667825 /* sound_6.wav */; };
+		2D5674DA2C77D26500667825 /* sound_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674C12C77D26500667825 /* sound_1.wav */; };
+		2D5674DC2C77D26500667825 /* sound_7.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674C32C77D26500667825 /* sound_7.wav */; };
+		2D5674DF2C77D26500667825 /* sound_9.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674C62C77D26500667825 /* sound_9.wav */; };
+		2D5674E02C77D26500667825 /* sound_13.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674C72C77D26500667825 /* sound_13.wav */; };
+		2D5674E12C77D26500667825 /* sound_2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674C82C77D26500667825 /* sound_2.wav */; };
+		2D5674E22C77D26500667825 /* sound_12.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674C92C77D26500667825 /* sound_12.wav */; };
+		2D5674E42C77D26500667825 /* sound_17.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674CB2C77D26500667825 /* sound_17.wav */; };
+		2D5674E52C77D26500667825 /* sound_18.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674CC2C77D26500667825 /* sound_18.wav */; };
+		2D5674E72C7878AC00667825 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5674E62C7878AC00667825 /* HapticManager.swift */; };
+		2D5674EC2C787AF600667825 /* haptic_0.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674EB2C787AF600667825 /* haptic_0.ahap */; };
+		2D5674EE2C787F2000667825 /* haptic_1.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674ED2C787F2000667825 /* haptic_1.ahap */; };
+		2D5674F02C787F8C00667825 /* haptic_2.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674EF2C787F8C00667825 /* haptic_2.ahap */; };
+		2D5674F22C78802700667825 /* haptic_3.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674F12C78802700667825 /* haptic_3.ahap */; };
+		2D5674F42C78802E00667825 /* haptic_4.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674F32C78802E00667825 /* haptic_4.ahap */; };
+		2D5674F62C78803C00667825 /* haptic_5.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674F52C78803C00667825 /* haptic_5.ahap */; };
+		2D5674F82C78804500667825 /* haptic_6.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674F72C78804500667825 /* haptic_6.ahap */; };
+		2D5674FA2C78805300667825 /* haptic_7.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674F92C78805300667825 /* haptic_7.ahap */; };
+		2D5674FC2C78805B00667825 /* haptic_8.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674FB2C78805B00667825 /* haptic_8.ahap */; };
+		2D5674FE2C78806300667825 /* haptic_9.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674FD2C78806300667825 /* haptic_9.ahap */; };
+		2D5675002C78806D00667825 /* haptic_10.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674FF2C78806D00667825 /* haptic_10.ahap */; };
+		2D5675022C78807500667825 /* haptic_11.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5675012C78807500667825 /* haptic_11.ahap */; };
+		2D5675042C78807F00667825 /* haptic_12.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5675032C78807F00667825 /* haptic_12.ahap */; };
+		2D5675062C78808500667825 /* haptic_13.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5675052C78808500667825 /* haptic_13.ahap */; };
+		2D5675082C78808B00667825 /* haptic_14.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5675072C78808B00667825 /* haptic_14.ahap */; };
+		2D56750A2C78809100667825 /* haptic_15.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5675092C78809100667825 /* haptic_15.ahap */; };
+		2D56750C2C78809A00667825 /* haptic_16.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D56750B2C78809A00667825 /* haptic_16.ahap */; };
+		2D56750E2C7880A800667825 /* haptic_17.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D56750D2C7880A800667825 /* haptic_17.ahap */; };
+		2D5675122C78848F00667825 /* haptic_18.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5675112C78848F00667825 /* haptic_18.ahap */; };
+		2D5675142C78849700667825 /* haptic_19.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5675132C78849700667825 /* haptic_19.ahap */; };
 		2D99442D2C651DCB004F3A9D /* fail.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D9944282C651DCB004F3A9D /* fail.wav */; };
-		2D99442E2C651DCB004F3A9D /* flip-2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D9944292C651DCB004F3A9D /* flip-2.wav */; };
-		2D99442F2C651DCB004F3A9D /* flip-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D99442A2C651DCB004F3A9D /* flip-1.wav */; };
 		2D9944302C651DCB004F3A9D /* shuffle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D99442B2C651DCB004F3A9D /* shuffle.wav */; };
 		2D9944312C651DCB004F3A9D /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D99442C2C651DCB004F3A9D /* success.wav */; };
-		2D9944342C651E6B004F3A9D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9944332C651E6B004F3A9D /* Constant.swift */; };
 		2D9944362C651E76004F3A9D /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9944352C651E76004F3A9D /* SoundManager.swift */; };
 		2DA776292C73E02300387B34 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA776282C73E02300387B34 /* CreditsView.swift */; };
 		2DEA9D4C2C626E1800D3E85A /* CardGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA9D4B2C626E1800D3E85A /* CardGridView.swift */; };
@@ -36,12 +74,50 @@
 		2D32E3D12C62645F00E6163B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2D32E3D82C62660900E6163B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		2D38A6DD2C73838000BC4C45 /* NewGameTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameTimerView.swift; sourceTree = "<group>"; };
+		2D5674B42C77D26400667825 /* sound_19.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_19.wav; sourceTree = "<group>"; };
+		2D5674B52C77D26400667825 /* sound_0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_0.wav; sourceTree = "<group>"; };
+		2D5674B62C77D26400667825 /* sound_14.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_14.wav; sourceTree = "<group>"; };
+		2D5674B72C77D26400667825 /* sound_8.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_8.wav; sourceTree = "<group>"; };
+		2D5674B82C77D26400667825 /* sound_16.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_16.wav; sourceTree = "<group>"; };
+		2D5674B92C77D26400667825 /* sound_11.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_11.wav; sourceTree = "<group>"; };
+		2D5674BA2C77D26400667825 /* sound_3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_3.wav; sourceTree = "<group>"; };
+		2D5674BB2C77D26400667825 /* sound_10.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_10.wav; sourceTree = "<group>"; };
+		2D5674BC2C77D26400667825 /* sound_4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_4.wav; sourceTree = "<group>"; };
+		2D5674BD2C77D26400667825 /* sound_5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_5.wav; sourceTree = "<group>"; };
+		2D5674BE2C77D26400667825 /* sound_15.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_15.wav; sourceTree = "<group>"; };
+		2D5674BF2C77D26500667825 /* sound_6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_6.wav; sourceTree = "<group>"; };
+		2D5674C12C77D26500667825 /* sound_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_1.wav; sourceTree = "<group>"; };
+		2D5674C32C77D26500667825 /* sound_7.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_7.wav; sourceTree = "<group>"; };
+		2D5674C62C77D26500667825 /* sound_9.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_9.wav; sourceTree = "<group>"; };
+		2D5674C72C77D26500667825 /* sound_13.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_13.wav; sourceTree = "<group>"; };
+		2D5674C82C77D26500667825 /* sound_2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_2.wav; sourceTree = "<group>"; };
+		2D5674C92C77D26500667825 /* sound_12.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_12.wav; sourceTree = "<group>"; };
+		2D5674CB2C77D26500667825 /* sound_17.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_17.wav; sourceTree = "<group>"; };
+		2D5674CC2C77D26500667825 /* sound_18.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_18.wav; sourceTree = "<group>"; };
+		2D5674E62C7878AC00667825 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		2D5674EB2C787AF600667825 /* haptic_0.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_0.ahap; sourceTree = "<group>"; };
+		2D5674ED2C787F2000667825 /* haptic_1.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_1.ahap; sourceTree = "<group>"; };
+		2D5674EF2C787F8C00667825 /* haptic_2.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_2.ahap; sourceTree = "<group>"; };
+		2D5674F12C78802700667825 /* haptic_3.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_3.ahap; sourceTree = "<group>"; };
+		2D5674F32C78802E00667825 /* haptic_4.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_4.ahap; sourceTree = "<group>"; };
+		2D5674F52C78803C00667825 /* haptic_5.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_5.ahap; sourceTree = "<group>"; };
+		2D5674F72C78804500667825 /* haptic_6.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_6.ahap; sourceTree = "<group>"; };
+		2D5674F92C78805300667825 /* haptic_7.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_7.ahap; sourceTree = "<group>"; };
+		2D5674FB2C78805B00667825 /* haptic_8.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_8.ahap; sourceTree = "<group>"; };
+		2D5674FD2C78806300667825 /* haptic_9.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_9.ahap; sourceTree = "<group>"; };
+		2D5674FF2C78806D00667825 /* haptic_10.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_10.ahap; sourceTree = "<group>"; };
+		2D5675012C78807500667825 /* haptic_11.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_11.ahap; sourceTree = "<group>"; };
+		2D5675032C78807F00667825 /* haptic_12.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_12.ahap; sourceTree = "<group>"; };
+		2D5675052C78808500667825 /* haptic_13.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_13.ahap; sourceTree = "<group>"; };
+		2D5675072C78808B00667825 /* haptic_14.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_14.ahap; sourceTree = "<group>"; };
+		2D5675092C78809100667825 /* haptic_15.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_15.ahap; sourceTree = "<group>"; };
+		2D56750B2C78809A00667825 /* haptic_16.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_16.ahap; sourceTree = "<group>"; };
+		2D56750D2C7880A800667825 /* haptic_17.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_17.ahap; sourceTree = "<group>"; };
+		2D5675112C78848F00667825 /* haptic_18.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_18.ahap; sourceTree = "<group>"; };
+		2D5675132C78849700667825 /* haptic_19.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_19.ahap; sourceTree = "<group>"; };
 		2D9944282C651DCB004F3A9D /* fail.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fail.wav; sourceTree = "<group>"; };
-		2D9944292C651DCB004F3A9D /* flip-2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "flip-2.wav"; sourceTree = "<group>"; };
-		2D99442A2C651DCB004F3A9D /* flip-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "flip-1.wav"; sourceTree = "<group>"; };
 		2D99442B2C651DCB004F3A9D /* shuffle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shuffle.wav; sourceTree = "<group>"; };
 		2D99442C2C651DCB004F3A9D /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
-		2D9944332C651E6B004F3A9D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		2D9944352C651E76004F3A9D /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		2DA776282C73E02300387B34 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		2DEA9D4B2C626E1800D3E85A /* CardGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGridView.swift; sourceTree = "<group>"; };
@@ -88,6 +164,7 @@
 				2D32E3D92C62667800E6163B /* Screen */,
 				2D32E3DB2C62668A00E6163B /* Model */,
 				2D9944272C651D9D004F3A9D /* Sound */,
+				2D5674E82C787A9100667825 /* Haptic */,
 				2D9944322C651E57004F3A9D /* Utility */,
 				2D32E3CE2C62645F00E6163B /* Assets.xcassets */,
 				2D32E3D02C62645F00E6163B /* Preview Content */,
@@ -133,12 +210,57 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		2D5674E82C787A9100667825 /* Haptic */ = {
+			isa = PBXGroup;
+			children = (
+				2D5674EB2C787AF600667825 /* haptic_0.ahap */,
+				2D5674ED2C787F2000667825 /* haptic_1.ahap */,
+				2D5674EF2C787F8C00667825 /* haptic_2.ahap */,
+				2D5674F12C78802700667825 /* haptic_3.ahap */,
+				2D5674F32C78802E00667825 /* haptic_4.ahap */,
+				2D5674F52C78803C00667825 /* haptic_5.ahap */,
+				2D5674F72C78804500667825 /* haptic_6.ahap */,
+				2D5674F92C78805300667825 /* haptic_7.ahap */,
+				2D5674FB2C78805B00667825 /* haptic_8.ahap */,
+				2D5674FD2C78806300667825 /* haptic_9.ahap */,
+				2D5674FF2C78806D00667825 /* haptic_10.ahap */,
+				2D5675012C78807500667825 /* haptic_11.ahap */,
+				2D5675032C78807F00667825 /* haptic_12.ahap */,
+				2D5675052C78808500667825 /* haptic_13.ahap */,
+				2D5675072C78808B00667825 /* haptic_14.ahap */,
+				2D5675092C78809100667825 /* haptic_15.ahap */,
+				2D56750B2C78809A00667825 /* haptic_16.ahap */,
+				2D56750D2C7880A800667825 /* haptic_17.ahap */,
+				2D5675112C78848F00667825 /* haptic_18.ahap */,
+				2D5675132C78849700667825 /* haptic_19.ahap */,
+			);
+			path = Haptic;
+			sourceTree = "<group>";
+		};
 		2D9944272C651D9D004F3A9D /* Sound */ = {
 			isa = PBXGroup;
 			children = (
+				2D5674B52C77D26400667825 /* sound_0.wav */,
+				2D5674C12C77D26500667825 /* sound_1.wav */,
+				2D5674C82C77D26500667825 /* sound_2.wav */,
+				2D5674BA2C77D26400667825 /* sound_3.wav */,
+				2D5674BC2C77D26400667825 /* sound_4.wav */,
+				2D5674BD2C77D26400667825 /* sound_5.wav */,
+				2D5674BF2C77D26500667825 /* sound_6.wav */,
+				2D5674C32C77D26500667825 /* sound_7.wav */,
+				2D5674B72C77D26400667825 /* sound_8.wav */,
+				2D5674C62C77D26500667825 /* sound_9.wav */,
+				2D5674BB2C77D26400667825 /* sound_10.wav */,
+				2D5674B92C77D26400667825 /* sound_11.wav */,
+				2D5674C92C77D26500667825 /* sound_12.wav */,
+				2D5674C72C77D26500667825 /* sound_13.wav */,
+				2D5674B62C77D26400667825 /* sound_14.wav */,
+				2D5674BE2C77D26400667825 /* sound_15.wav */,
+				2D5674B82C77D26400667825 /* sound_16.wav */,
+				2D5674CB2C77D26500667825 /* sound_17.wav */,
+				2D5674CC2C77D26500667825 /* sound_18.wav */,
+				2D5674B42C77D26400667825 /* sound_19.wav */,
 				2D9944282C651DCB004F3A9D /* fail.wav */,
-				2D99442A2C651DCB004F3A9D /* flip-1.wav */,
-				2D9944292C651DCB004F3A9D /* flip-2.wav */,
 				2D99442B2C651DCB004F3A9D /* shuffle.wav */,
 				2D99442C2C651DCB004F3A9D /* success.wav */,
 			);
@@ -148,8 +270,8 @@
 		2D9944322C651E57004F3A9D /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				2D9944332C651E6B004F3A9D /* Constant.swift */,
 				2D9944352C651E76004F3A9D /* SoundManager.swift */,
+				2D5674E62C7878AC00667825 /* HapticManager.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -212,13 +334,51 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D5674D72C77D26500667825 /* sound_15.wav in Resources */,
+				2D5674F42C78802E00667825 /* haptic_4.ahap in Resources */,
+				2D5674F62C78803C00667825 /* haptic_5.ahap in Resources */,
+				2D5675122C78848F00667825 /* haptic_18.ahap in Resources */,
+				2D5674E22C77D26500667825 /* sound_12.wav in Resources */,
 				2D9944302C651DCB004F3A9D /* shuffle.wav in Resources */,
+				2D56750E2C7880A800667825 /* haptic_17.ahap in Resources */,
+				2D5675062C78808500667825 /* haptic_13.ahap in Resources */,
+				2D5674FE2C78806300667825 /* haptic_9.ahap in Resources */,
+				2D5674FC2C78805B00667825 /* haptic_8.ahap in Resources */,
+				2D5674E12C77D26500667825 /* sound_2.wav in Resources */,
+				2D5674D82C77D26500667825 /* sound_6.wav in Resources */,
+				2D5675002C78806D00667825 /* haptic_10.ahap in Resources */,
+				2D5674F02C787F8C00667825 /* haptic_2.ahap in Resources */,
+				2D5675022C78807500667825 /* haptic_11.ahap in Resources */,
+				2D5674CF2C77D26500667825 /* sound_14.wav in Resources */,
+				2D5674D02C77D26500667825 /* sound_8.wav in Resources */,
 				2D99442D2C651DCB004F3A9D /* fail.wav in Resources */,
-				2D99442F2C651DCB004F3A9D /* flip-1.wav in Resources */,
+				2D5675082C78808B00667825 /* haptic_14.ahap in Resources */,
+				2D5674EC2C787AF600667825 /* haptic_0.ahap in Resources */,
 				2D9944312C651DCB004F3A9D /* success.wav in Resources */,
+				2D5674D52C77D26500667825 /* sound_4.wav in Resources */,
+				2D5674F22C78802700667825 /* haptic_3.ahap in Resources */,
+				2D5674D42C77D26500667825 /* sound_10.wav in Resources */,
+				2D5675142C78849700667825 /* haptic_19.ahap in Resources */,
+				2D5674DA2C77D26500667825 /* sound_1.wav in Resources */,
+				2D5674D12C77D26500667825 /* sound_16.wav in Resources */,
 				2D32E3D22C62645F00E6163B /* Preview Assets.xcassets in Resources */,
 				2D32E3CF2C62645F00E6163B /* Assets.xcassets in Resources */,
-				2D99442E2C651DCB004F3A9D /* flip-2.wav in Resources */,
+				2D5675042C78807F00667825 /* haptic_12.ahap in Resources */,
+				2D5674D32C77D26500667825 /* sound_3.wav in Resources */,
+				2D5674E52C77D26500667825 /* sound_18.wav in Resources */,
+				2D5674E42C77D26500667825 /* sound_17.wav in Resources */,
+				2D56750A2C78809100667825 /* haptic_15.ahap in Resources */,
+				2D5674E02C77D26500667825 /* sound_13.wav in Resources */,
+				2D5674DC2C77D26500667825 /* sound_7.wav in Resources */,
+				2D5674CD2C77D26500667825 /* sound_19.wav in Resources */,
+				2D5674F82C78804500667825 /* haptic_6.ahap in Resources */,
+				2D5674DF2C77D26500667825 /* sound_9.wav in Resources */,
+				2D5674D62C77D26500667825 /* sound_5.wav in Resources */,
+				2D5674FA2C78805300667825 /* haptic_7.ahap in Resources */,
+				2D5674CE2C77D26500667825 /* sound_0.wav in Resources */,
+				2D56750C2C78809A00667825 /* haptic_16.ahap in Resources */,
+				2D5674EE2C787F2000667825 /* haptic_1.ahap in Resources */,
+				2D5674D22C77D26500667825 /* sound_11.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +389,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D9944342C651E6B004F3A9D /* Constant.swift in Sources */,
+				2D5674E72C7878AC00667825 /* HapticManager.swift in Sources */,
 				2D32E3CD2C62645E00E6163B /* ContentView.swift in Sources */,
 				2D9944362C651E76004F3A9D /* SoundManager.swift in Sources */,
 				2DEA9D532C627C3700D3E85A /* Card.swift in Sources */,

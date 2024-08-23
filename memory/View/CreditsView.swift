@@ -14,7 +14,7 @@ struct CreditsView: View {
             .sheet(isPresented: $isPresented, onDismiss: {
                 isPresented = false
             }, content: {
-                VStack(spacing: 20) {
+                VStack(alignment: .leading, spacing: 20) {
                     Text("Credits")
                         .font(.title)
                         .fontWeight(.bold)
@@ -32,11 +32,19 @@ struct CreditsView: View {
                         Text("Images")
                             .fontWeight(.semibold)
 
-                        VStack(alignment: .trailing) {
+                        VStack {
                             Text("Victor Weiss")
                             Text("Design with Blink*")
                         }
                         .font(.callout)
+                    }
+
+                    HStack(spacing: 50) {
+                        Text("Sounds")
+                            .fontWeight(.semibold)
+
+                        Text("Mixkit")
+                            .font(.callout)
                     }
 
                     Spacer()
@@ -47,9 +55,11 @@ struct CreditsView: View {
 
                     Spacer()
 
-                    Text("Simple Memo is not affiliated with Ravensburger Digital GmbH")
+                    Text("Simple Memo is not affiliated with Ravensburger Digital GmbH.")
                         .font(.footnote)
                         .fontWeight(.light)
+                        .fixedSize(horizontal: false, vertical: true)
+
                 }
                 .foregroundStyle(.frost)
                 .multilineTextAlignment(.center)

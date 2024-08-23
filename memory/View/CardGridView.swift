@@ -39,8 +39,9 @@ struct CardGridView: View {
 
                             deck.choose(card, soundManager: soundManager)
 
-                            soundManager.playSound(sound: "flip-\(Int.random(in: 1...2))")
-                            impactFeedback.impactOccurred()
+                            soundManager.playSound(sound: card.soundName)
+                            playHaptic(file: card.hapticName)
+
                         }
                         .background(
                             GeometryReader { geometry in

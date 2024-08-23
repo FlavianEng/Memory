@@ -32,7 +32,7 @@ class Deck: ObservableObject {
             if cards[index].isRevealed && cards[index].id != card.id {
                 canRevealCards = false
 
-                if cards[index].number == cards[chosenIndex].number {
+                if cards[index].soundNumber == cards[chosenIndex].soundNumber {
                     matchCards(index: index, chosenIndex: chosenIndex, soundManager: soundManager)
                     player.incrementMoveCount()
                 }
@@ -65,7 +65,6 @@ class Deck: ObservableObject {
                 self.cards[chosenIndex].isRevealed = false
 
                 self.player.incrementMoveCount()
-                notficationFeedback.notificationOccurred(.error)
             }
 
             self.canRevealCards = true
@@ -78,24 +77,22 @@ class Deck: ObservableObject {
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             soundManager.playSound(sound: "success")
-            notficationFeedback.notificationOccurred(.success)
         }
     }
 
-    // TODO: (Flavian) - Improves unique card number selection by removing from array the index taken
-    // TODO: (Flavian) - Automatically get the max uniqueCardsNumber
+    // TODO: (Flavian) - Automatically get the max uniqueSoundsNumber
     private func initDeck() {
-        var uniqueCardsNumber = Set<Int>()
+        var uniqueNumbers = Set<Int>()
 
-        while uniqueCardsNumber.count != numberOfPairs {
-            uniqueCardsNumber.insert(Int.random(in: 1...18))
+        while uniqueNumbers.count != numberOfPairs {
+            uniqueNumbers.insert(Int.random(in: 0...19))
         }
 
         cards = []
 
-        uniqueCardsNumber.forEach { cardNumber in
-            cards.append(Card(number: cardNumber))
-            cards.append(Card(number: cardNumber))
+        uniqueNumbers.forEach { number in
+            cards.append(Card(iconNumber: Int.random(in: 1...18), soundNumber: number, hapticNumber: number))
+            cards.append(Card(iconNumber: Int.random(in: 1...18), soundNumber: number, hapticNumber: number))
         }
 
         cards = cards.shuffled()
