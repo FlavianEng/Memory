@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D32E3CB2C62645E00E6163B /* memoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32E3CA2C62645E00E6163B /* memoryApp.swift */; };
+		2D29B8E02C79D5B800CA6AD5 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D29B8DF2C79D5B800CA6AD5 /* MenuView.swift */; };
+		2D29B8E22C79D5D500CA6AD5 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D29B8E12C79D5D500CA6AD5 /* MenuItemView.swift */; };
+		2D32E3CB2C62645E00E6163B /* MemoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32E3CA2C62645E00E6163B /* MemoryApp.swift */; };
 		2D32E3CD2C62645E00E6163B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32E3CC2C62645E00E6163B /* ContentView.swift */; };
 		2D32E3CF2C62645F00E6163B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D32E3CE2C62645F00E6163B /* Assets.xcassets */; };
 		2D32E3D22C62645F00E6163B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D32E3D12C62645F00E6163B /* Preview Assets.xcassets */; };
@@ -67,8 +69,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D29B8DF2C79D5B800CA6AD5 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		2D29B8E12C79D5D500CA6AD5 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 		2D32E3C72C62645E00E6163B /* memory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memory.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D32E3CA2C62645E00E6163B /* memoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoryApp.swift; sourceTree = "<group>"; };
+		2D32E3CA2C62645E00E6163B /* MemoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryApp.swift; sourceTree = "<group>"; };
 		2D32E3CC2C62645E00E6163B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2D32E3CE2C62645F00E6163B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D32E3D12C62645F00E6163B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -159,7 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				2D32E3D82C62660900E6163B /* Info.plist */,
-				2D32E3CA2C62645E00E6163B /* memoryApp.swift */,
+				2D32E3CA2C62645E00E6163B /* MemoryApp.swift */,
 				2D32E3DA2C62668100E6163B /* View */,
 				2D32E3D92C62667800E6163B /* Screen */,
 				2D32E3DB2C62668A00E6163B /* Model */,
@@ -184,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				2D32E3CC2C62645E00E6163B /* ContentView.swift */,
+				2D29B8DF2C79D5B800CA6AD5 /* MenuView.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 				2DFAACFD2C68B5F600BEB1E6 /* MoveCounterView.swift */,
 				2D38A6DD2C73838000BC4C45 /* NewGameTimerView.swift */,
 				2DA776282C73E02300387B34 /* CreditsView.swift */,
+				2D29B8E12C79D5D500CA6AD5 /* MenuItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,6 +292,7 @@
 				2D32E3C32C62645E00E6163B /* Sources */,
 				2D32E3C42C62645E00E6163B /* Frameworks */,
 				2D32E3C52C62645E00E6163B /* Resources */,
+				2D29B8E62C79DB2000CA6AD5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -320,6 +327,8 @@
 				Base,
 			);
 			mainGroup = 2D32E3BE2C62645E00E6163B;
+			packageReferences = (
+			);
 			productRefGroup = 2D32E3C82C62645E00E6163B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -384,6 +393,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2D29B8E62C79DB2000CA6AD5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint lint --fix --format --strict\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2D32E3C32C62645E00E6163B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -393,14 +424,16 @@
 				2D32E3CD2C62645E00E6163B /* ContentView.swift in Sources */,
 				2D9944362C651E76004F3A9D /* SoundManager.swift in Sources */,
 				2DEA9D532C627C3700D3E85A /* Card.swift in Sources */,
+				2D29B8E22C79D5D500CA6AD5 /* MenuItemView.swift in Sources */,
 				2DEA9D4C2C626E1800D3E85A /* CardGridView.swift in Sources */,
 				2DEA9D512C627C1000D3E85A /* Deck.swift in Sources */,
 				2DFAACFE2C68B5F600BEB1E6 /* MoveCounterView.swift in Sources */,
+				2D29B8E02C79D5B800CA6AD5 /* MenuView.swift in Sources */,
 				2DEA9D4F2C62729500D3E85A /* CardView.swift in Sources */,
 				2D38A6DE2C73838000BC4C45 /* NewGameTimerView.swift in Sources */,
 				2DA776292C73E02300387B34 /* CreditsView.swift in Sources */,
 				2DFAACFC2C68B53500BEB1E6 /* Player.swift in Sources */,
-				2D32E3CB2C62645E00E6163B /* memoryApp.swift in Sources */,
+				2D32E3CB2C62645E00E6163B /* MemoryApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +569,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"memory/Preview Content\"";
 				DEVELOPMENT_TEAM = UFPY5T7Q52;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = memory/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Simple Memo";
@@ -573,6 +607,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"memory/Preview Content\"";
 				DEVELOPMENT_TEAM = UFPY5T7Q52;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = memory/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Simple Memo";
