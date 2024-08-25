@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D29B8E02C79D5B800CA6AD5 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D29B8DF2C79D5B800CA6AD5 /* MenuView.swift */; };
 		2D29B8E22C79D5D500CA6AD5 /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D29B8E12C79D5D500CA6AD5 /* MenuItemView.swift */; };
+		2D29B8E82C79F07100CA6AD5 /* MenuBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D29B8E72C79F07100CA6AD5 /* MenuBackgroundView.swift */; };
 		2D32E3CB2C62645E00E6163B /* MemoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32E3CA2C62645E00E6163B /* MemoryApp.swift */; };
 		2D32E3CD2C62645E00E6163B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32E3CC2C62645E00E6163B /* ContentView.swift */; };
 		2D32E3CF2C62645F00E6163B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D32E3CE2C62645F00E6163B /* Assets.xcassets */; };
@@ -59,7 +60,10 @@
 		2D9944302C651DCB004F3A9D /* shuffle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D99442B2C651DCB004F3A9D /* shuffle.wav */; };
 		2D9944312C651DCB004F3A9D /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D99442C2C651DCB004F3A9D /* success.wav */; };
 		2D9944362C651E76004F3A9D /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9944352C651E76004F3A9D /* SoundManager.swift */; };
+		2DA1B9722C79FBD300D0DC9E /* InfiniteScrollerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA1B9712C79FBD300D0DC9E /* InfiniteScrollerView.swift */; };
 		2DA776292C73E02300387B34 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA776282C73E02300387B34 /* CreditsView.swift */; };
+		2DE74EEC2C7A451C000F510F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE74EEB2C7A451C000F510F /* BlurView.swift */; };
+		2DE74EF02C7B1468000F510F /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE74EEF2C7B1468000F510F /* UIApplicationExtension.swift */; };
 		2DEA9D4C2C626E1800D3E85A /* CardGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA9D4B2C626E1800D3E85A /* CardGridView.swift */; };
 		2DEA9D4F2C62729500D3E85A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA9D4E2C62729500D3E85A /* CardView.swift */; };
 		2DEA9D512C627C1000D3E85A /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA9D502C627C1000D3E85A /* Deck.swift */; };
@@ -71,6 +75,7 @@
 /* Begin PBXFileReference section */
 		2D29B8DF2C79D5B800CA6AD5 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		2D29B8E12C79D5D500CA6AD5 /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
+		2D29B8E72C79F07100CA6AD5 /* MenuBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBackgroundView.swift; sourceTree = "<group>"; };
 		2D32E3C72C62645E00E6163B /* memory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = memory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D32E3CA2C62645E00E6163B /* MemoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryApp.swift; sourceTree = "<group>"; };
 		2D32E3CC2C62645E00E6163B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -123,7 +128,10 @@
 		2D99442B2C651DCB004F3A9D /* shuffle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shuffle.wav; sourceTree = "<group>"; };
 		2D99442C2C651DCB004F3A9D /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
 		2D9944352C651E76004F3A9D /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		2DA1B9712C79FBD300D0DC9E /* InfiniteScrollerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfiniteScrollerView.swift; sourceTree = "<group>"; };
 		2DA776282C73E02300387B34 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		2DE74EEB2C7A451C000F510F /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		2DE74EEF2C7B1468000F510F /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		2DEA9D4B2C626E1800D3E85A /* CardGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGridView.swift; sourceTree = "<group>"; };
 		2DEA9D4E2C62729500D3E85A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		2DEA9D502C627C1000D3E85A /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
@@ -169,6 +177,7 @@
 				2D32E3DB2C62668A00E6163B /* Model */,
 				2D9944272C651D9D004F3A9D /* Sound */,
 				2D5674E82C787A9100667825 /* Haptic */,
+				2DE74EEE2C7B1425000F510F /* Extension */,
 				2D9944322C651E57004F3A9D /* Utility */,
 				2D32E3CE2C62645F00E6163B /* Assets.xcassets */,
 				2D32E3D02C62645F00E6163B /* Preview Content */,
@@ -202,6 +211,9 @@
 				2D38A6DD2C73838000BC4C45 /* NewGameTimerView.swift */,
 				2DA776282C73E02300387B34 /* CreditsView.swift */,
 				2D29B8E12C79D5D500CA6AD5 /* MenuItemView.swift */,
+				2D29B8E72C79F07100CA6AD5 /* MenuBackgroundView.swift */,
+				2DA1B9712C79FBD300D0DC9E /* InfiniteScrollerView.swift */,
+				2DE74EEB2C7A451C000F510F /* BlurView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -280,6 +292,14 @@
 				2D5674E62C7878AC00667825 /* HapticManager.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		2DE74EEE2C7B1425000F510F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2DE74EEF2C7B1468000F510F /* UIApplicationExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,7 +417,7 @@
 		2D29B8E62C79DB2000CA6AD5 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -410,7 +430,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint lint --fix --format --strict\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif [ \"${ENABLE_PREVIEWS}\" = \"YES\" ]; then\n  echo \"Not running Swift Format for Xcode Previews\"\n  exit 0;\nfi\n\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint lint --fix --format --strict && swiftlint\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -424,13 +444,17 @@
 				2D32E3CD2C62645E00E6163B /* ContentView.swift in Sources */,
 				2D9944362C651E76004F3A9D /* SoundManager.swift in Sources */,
 				2DEA9D532C627C3700D3E85A /* Card.swift in Sources */,
+				2D29B8E82C79F07100CA6AD5 /* MenuBackgroundView.swift in Sources */,
 				2D29B8E22C79D5D500CA6AD5 /* MenuItemView.swift in Sources */,
+				2DE74EF02C7B1468000F510F /* UIApplicationExtension.swift in Sources */,
 				2DEA9D4C2C626E1800D3E85A /* CardGridView.swift in Sources */,
 				2DEA9D512C627C1000D3E85A /* Deck.swift in Sources */,
 				2DFAACFE2C68B5F600BEB1E6 /* MoveCounterView.swift in Sources */,
 				2D29B8E02C79D5B800CA6AD5 /* MenuView.swift in Sources */,
 				2DEA9D4F2C62729500D3E85A /* CardView.swift in Sources */,
 				2D38A6DE2C73838000BC4C45 /* NewGameTimerView.swift in Sources */,
+				2DA1B9722C79FBD300D0DC9E /* InfiniteScrollerView.swift in Sources */,
+				2DE74EEC2C7A451C000F510F /* BlurView.swift in Sources */,
 				2DA776292C73E02300387B34 /* CreditsView.swift in Sources */,
 				2DFAACFC2C68B53500BEB1E6 /* Player.swift in Sources */,
 				2D32E3CB2C62645E00E6163B /* MemoryApp.swift in Sources */,
