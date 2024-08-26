@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct NewGameTimerView: View {
-    @ObservedObject var deck: Deck
+    var deck: Deck
 
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
@@ -28,5 +28,5 @@ struct NewGameTimerView: View {
 }
 
 #Preview {
-    NewGameTimerView(deck: Deck(numberOfPairs: 8))
+    NewGameTimerView(deck: Deck(mode: .classic, isMultiplayer: false, numberOfPairs: 8))
 }

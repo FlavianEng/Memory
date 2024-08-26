@@ -5,25 +5,27 @@ struct MoveCounterView: View {
     let player: Player
 
     var body: some View {
-        HStack(spacing: 0) {
-            Text("Number of move: ")
+        VStack(spacing: 0) {
+            HStack(spacing: 0) {
+                Text("Number of move: ")
 
-            Text("\(player.moveCount)")
-                .fontWeight(.bold)
+                Text("\(player.moveCount)")
+                    .fontWeight(.bold)
 
+            }
+            .foregroundStyle(.frost)
+            .font(.title2)
+
+            HStack(spacing: 0) {
+                Text("Best: ")
+
+                Text("\(bestMoveCount)")
+                    .fontWeight(.bold)
+
+            }
+            .foregroundStyle(.yellow.opacity(0.8))
+            .font(.title3)
         }
-        .foregroundStyle(.frost)
-        .font(.title2)
-
-        HStack(spacing: 0) {
-            Text("Best: ")
-
-            Text("\(bestMoveCount)")
-                .fontWeight(.bold)
-
-        }
-        .foregroundStyle(.yellow.opacity(0.8))
-        .font(.title3)
     }
 }
 

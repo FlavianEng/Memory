@@ -1,48 +1,65 @@
 import SwiftUI
 
 struct MenuView: View {
-    let safeAreas = UIApplication.windowSafeAreaInsets
-
     @State private var isCreditsDisplayed: Bool = false
+    @State private var isMultiplayer = 0
 
     var body: some View {
-        ZStack {
-            MenuBackgroundView()
+        NavigationStack {
+            ZStack {
+                MenuBackgroundView()
 
-            VStack(spacing: 50) {
-                Text("Simple Memo")
-                    .font(.system(size: 40, weight: .bold))
-                    .padding(.top, safeAreas.top)
+                VStack(spacing: 50) {
+                    Text("Simple Memo")
+                        .font(.system(size: 40, weight: .bold))
+                        .padding(.top, UIApplication.windowSafeAreaInsets.top)
 
-                Spacer()
-
-                MenuItemView(action: {}, title: "Classic Mode", subtitle: "The classic card matching game")
-
-                MenuItemView(action: {}, title: "Sound Mode", subtitle: "The classic card matching game")
-
-                MenuItemView(action: {}, title: "Vibration Mode", subtitle: "The classic card matching game")
-
-                Spacer()
-            }
-            .foregroundStyle(.frost)
-            .padding(50)
-            .background(BlurView())
-            .clipShape(.rect(cornerRadius: 25))
-
-            VStack(alignment: .trailing) {
-                HStack {
                     Spacer()
-                    CreditsView(isPresented: $isCreditsDisplayed)
+
+                    MultiplayerPicker(preselectedIndex: $isMultiplayer, options: ["1 Player", "2 Player"])
+
+                    NavigationLink {
+                        GameView(deck: Deck(mode: .classic, isMultiplayer: isMultiplayer == 1, numberOfPairs: 12))
+                    } label: {
+                        MenuItemView(title: "Classic Mode", subtitle: "The classic card matching game")
+                    }
+
+                    NavigationLink {
+                        GameView(deck: Deck(mode: .sound, isMultiplayer: isMultiplayer == 1, numberOfPairs: 12))
+                    } label: {
+                        MenuItemView(title: "Sound Mode", subtitle: "Match the sounds, not the images!")
+                    }
+
+                    NavigationLink {
+                        GameView(deck: Deck(mode: .haptic, isMultiplayer: isMultiplayer == 1, numberOfPairs: 12))
+                    } label: {
+                        MenuItemView(title: "Vibration Mode", subtitle: "Hardcore mode! Match the vibrations")
+                    }
+
+                    Spacer()
                 }
-                Spacer()
+                .foregroundStyle(.frost)
+                .padding(50)
+                .background(BlurView())
+                .clipShape(.rect(cornerRadius: 25))
+
+                VStack(alignment: .trailing) {
+                    HStack {
+                        Spacer()
+                        CreditsView(isPresented: $isCreditsDisplayed)
+                    }
+                    Spacer()
+                }
+                .padding(.trailing, UIScreen.main.bounds.size.width / 8)
+                .padding(.top, UIApplication.windowSafeAreaInsets.top)
             }
-            .padding(.trailing, UIScreen.main.bounds.size.width / 8)
-            .padding(.top, safeAreas.top)
+            .ignoresSafeArea()
+            .navigationBarBackButtonHidden(true)
         }
-        .ignoresSafeArea()
     }
 }
 
 #Preview {
     MenuView()
+        .environmentObject(SoundManager())
 }

@@ -17,6 +17,7 @@ struct MenuBackgroundView: View {
                         }
                     }
                 }
+                .padding(.top, UIApplication.windowSafeAreaInsets.top)
                 Spacer()
 
                 InfiniteScrollerView(contentWidth: contentWidth, isLeftToRight: false) {
@@ -41,8 +42,8 @@ struct MenuBackgroundView: View {
                         }
                     }
                 }
+                .padding(.bottom, UIApplication.windowSafeAreaInsets.bottom)
             }
-
         }
         .background(.midnight)
     }

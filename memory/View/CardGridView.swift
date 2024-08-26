@@ -1,5 +1,6 @@
 import SwiftUI
 
+// TODO: (Flavian) - Improves grid size responsivness
 struct CardGridView: View {
     @EnvironmentObject var soundManager: SoundManager
     @ObservedObject var deck: Deck
@@ -85,7 +86,7 @@ struct CardGridView: View {
                             }
                         )
                 }
-                .padding(.bottom, 50)
+                .padding(.bottom, UIApplication.windowSafeAreaInsets.bottom)
             }
             .opacity(deck.deckOpacity)
             .onAppear(perform: {
@@ -103,6 +104,6 @@ struct CardGridView: View {
 }
 
 #Preview {
-    CardGridView(deck: Deck(numberOfPairs: 8))
+    CardGridView(deck: Deck(mode: .classic, isMultiplayer: false, numberOfPairs: 2))
         .environmentObject(SoundManager())
 }

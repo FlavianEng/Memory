@@ -18,7 +18,7 @@ struct CreditsView: View {
                     Text("Credits")
                         .font(.title)
                         .fontWeight(.bold)
-                        .padding(.bottom, 25)
+                        .padding(.vertical, 25)
 
                     HStack(spacing: 50) {
                         Text("Developer")

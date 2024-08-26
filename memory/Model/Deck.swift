@@ -1,20 +1,35 @@
 import SwiftUI
 
-class Deck: ObservableObject {
-    @AppStorage("bestMoveCount") private var bestMoveCount = 0
+enum GameMode {
+    case classic, sound, haptic
+}
 
+// TODO: (Flavian) - Add the two differents other modes
+class Deck: ObservableObject {
+    let isMultiplayer: Bool
+    let gameMode: GameMode
+
+    @Published var players: [Player] = []
+    @Published var currentPlayer: Player = Player()
     @Published var canRevealCards = true
     @Published var cards: [Card]
     @Published var deckOpacity: Double = 1
     @Published var isDealingCards = false
-    @Published var player = Player()
     @Published var newGameTimer: Double = 0
+
+    // TODO: (Flavian) - Create a best move count for each 1P. mode
+    @AppStorage("bestMoveCount") private var bestMoveCount = 0
 
     private var numberOfPairs: Int
 
-    init(numberOfPairs: Int) {
-        self.numberOfPairs = 0
+    init(mode: GameMode, isMultiplayer: Bool, numberOfPairs: Int) {
         self.cards = []
+        self.isMultiplayer = isMultiplayer
+        self.gameMode = mode
+        self.numberOfPairs = 0
+
+        createPlayers()
+        pickFirstPlayer()
 
         setNumberOfPairs(numberOfPairs: numberOfPairs)
         initDeck()
@@ -32,9 +47,9 @@ class Deck: ObservableObject {
             if cards[index].isRevealed && cards[index].id != card.id {
                 canRevealCards = false
 
-                if cards[index].soundNumber == cards[chosenIndex].soundNumber {
+                if cards[index].iconNumber == cards[chosenIndex].iconNumber {
                     matchCards(index: index, chosenIndex: chosenIndex, soundManager: soundManager)
-                    player.incrementMoveCount()
+                    currentPlayer.incrementMoveCount()
                 }
 
                 hideCards(index: index, chosenIndex: chosenIndex)
@@ -46,14 +61,13 @@ class Deck: ObservableObject {
         checkMatchIsOver()
     }
 
-    // TODO: (Flavian) - Move into a game class
     private func checkMatchIsOver() {
         if cards.allSatisfy({$0.isMatched}) {
-            saveBestMove()
+            saveBestMove(player: currentPlayer)
 
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.resetGame()
-                self.resetScore()
+                self.resetScores()
             }
         }
     }
@@ -64,7 +78,7 @@ class Deck: ObservableObject {
                 self.cards[index].isRevealed = false
                 self.cards[chosenIndex].isRevealed = false
 
-                self.player.incrementMoveCount()
+                self.currentPlayer.incrementMoveCount()
             }
 
             self.canRevealCards = true
@@ -81,24 +95,24 @@ class Deck: ObservableObject {
     }
 
     // TODO: (Flavian) - Automatically get the max uniqueSoundsNumber
+    // TODO: (Flavian) - Adapt to handle different modes
     private func initDeck() {
         var uniqueNumbers = Set<Int>()
 
         while uniqueNumbers.count != numberOfPairs {
-            uniqueNumbers.insert(Int.random(in: 0...19))
+            uniqueNumbers.insert(Int.random(in: 1...18))
         }
 
         cards = []
 
         uniqueNumbers.forEach { number in
-            cards.append(Card(iconNumber: Int.random(in: 1...18), soundNumber: number, hapticNumber: number))
-            cards.append(Card(iconNumber: Int.random(in: 1...18), soundNumber: number, hapticNumber: number))
+            cards.append(Card(iconNumber: number, soundNumber: number, hapticNumber: number))
+            cards.append(Card(iconNumber: number, soundNumber: number, hapticNumber: number))
         }
 
         cards = cards.shuffled()
     }
 
-    // TODO: (Flavian) - Move into a game class
     private func resetGame() {
         newGameTimer = 3
 
@@ -122,13 +136,32 @@ class Deck: ObservableObject {
         }
     }
 
-    // TODO: (Flavian) - Move into a game class
-    private func resetScore() {
-        player.moveCount = 0
+    private func createPlayers() {
+        players = [Player()]
+
+        if isMultiplayer {
+            players.append(Player())
+        }
     }
 
-    // TODO: (Flavian) - Move into a game class
-    private func saveBestMove() {
+    private func pickFirstPlayer() {
+        guard let currentPlayer = players.randomElement() else {
+            fatalError("currentPlayer has been impossible to pick")
+        }
+        self.currentPlayer = currentPlayer
+    }
+
+    private func resetScores() {
+        for index in players.indices {
+            players[index].moveCount = 0
+        }
+    }
+
+    private func saveBestMove(player: Player) {
+        guard !isMultiplayer else {
+            return
+        }
+
         if player.moveCount < bestMoveCount || bestMoveCount == 0 {
             bestMoveCount = player.moveCount
         }

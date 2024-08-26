@@ -14,6 +14,7 @@ struct InfiniteScrollerView<Content: View>: View {
                 content()
             }
             .offset(x: xOffset, y: 0)
+            .drawingGroup()
         }
         .environment(\.layoutDirection, isLeftToRight ? .leftToRight : .rightToLeft)
         .disabled(true)

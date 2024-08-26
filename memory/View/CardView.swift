@@ -59,7 +59,7 @@ extension Image {
 }
 
 #Preview {
-    let deck = Deck(numberOfPairs: 4)
+    let deck = Deck(mode: .classic, isMultiplayer: false, numberOfPairs: 4)
     deck.cards[1].isRevealed = true
 
     return Group {
