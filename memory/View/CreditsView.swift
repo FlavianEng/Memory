@@ -5,8 +5,9 @@ struct CreditsView: View {
 
     var body: some View {
         Text("Credits")
-            .font(.footnote)
+            .font(.subheadline)
             .foregroundStyle(.frost)
+            .padding()
             .onTapGesture {
                 isPresented = true
             }

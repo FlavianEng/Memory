@@ -14,7 +14,7 @@ struct MenuView: View {
                 MenuBackgroundView()
 
                 VStack(spacing: 50) {
-                    VStack(spacing: 20) {
+                    VStack(spacing: 0) {
                         Text("Simple Memo")
                             .font(.system(size: 40, weight: .bold))
                             .padding(.top, UIApplication.windowSafeAreaInsets.top)
@@ -22,7 +22,7 @@ struct MenuView: View {
                         CreditsView(isPresented: $isCreditsDisplayed)
                     }
 
-                    MultiplayerPicker(preselectedIndex: $isMultiplayer, options: ["1 Player", "2 Player"])
+                    //                    MultiplayerPicker(preselectedIndex: $isMultiplayer, options: ["1 Player", "2 Player"])
 
                     NavigationLink {
                         GameView(deck: Deck(
@@ -73,7 +73,7 @@ struct MenuView: View {
                 }
                 .foregroundStyle(.frost)
                 .padding(50)
-                .background(BlurView())
+                .background(BlurView().opacity(0.95))
                 .clipShape(.rect(cornerRadius: 25))
             }
             .ignoresSafeArea()
