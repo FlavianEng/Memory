@@ -2,8 +2,10 @@
 
 Welcome to the Memory Game! This is a simple yet engaging memory game built using SwiftUI for iOS and iPadOS. Test your memory by matching pairs of cards within the least number of moves possible. Enjoy the intuitive and responsive design tailored for both iPhone and iPad.
 
-<img height="500" src="https://github.com/user-attachments/assets/130a1d5b-829a-4b51-82b7-d61bbd4cecec" />
-<img height="500" src="https://github.com/user-attachments/assets/574ed86d-c0d8-4be3-9e5c-fc173f67be6e" />
+<img height="350" src="https://github.com/user-attachments/assets/5987e76e-075b-4fa0-8d3a-2aaa7dee47c0" />
+<img height="350" src="https://github.com/user-attachments/assets/dd204502-c2f8-4dcd-bb83-8fd9012e50c6" />
+<img height="350" src="https://github.com/user-attachments/assets/b3e6aada-e7a1-427b-ba9b-4812bf7fa0da" />
+<img height="350" src="https://github.com/user-attachments/assets/cbc4abcb-4671-4e1a-a4ab-9e602a7b1c02" />
 
 ## Features
 - **Smooth Animations**: Enjoy delightful animations as you flip and match cards.
