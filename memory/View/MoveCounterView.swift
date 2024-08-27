@@ -1,8 +1,8 @@
 import SwiftUI
 
 struct MoveCounterView: View {
-    @AppStorage("bestMoveCount") private var bestMoveCount = 0
     let player: Player
+    let bestMove: Int
 
     var body: some View {
         VStack(spacing: 0) {
@@ -19,7 +19,7 @@ struct MoveCounterView: View {
             HStack(spacing: 0) {
                 Text("Best: ")
 
-                Text("\(bestMoveCount)")
+                Text("\(bestMove)")
                     .fontWeight(.bold)
 
             }
@@ -30,5 +30,5 @@ struct MoveCounterView: View {
 }
 
 #Preview {
-    MoveCounterView(player: Player())
+    MoveCounterView(player: Player(), bestMove: 2)
 }

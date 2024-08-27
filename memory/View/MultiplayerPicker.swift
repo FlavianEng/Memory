@@ -34,7 +34,7 @@ struct MultiplayerPicker: View {
             }
         }
         .frame(height: 50)
-        .cornerRadius(20)
+        .cornerRadius(25)
     }
 }
 

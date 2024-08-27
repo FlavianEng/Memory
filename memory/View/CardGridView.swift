@@ -40,8 +40,17 @@ struct CardGridView: View {
 
                             deck.choose(card, soundManager: soundManager)
 
-                            soundManager.playSound(sound: card.soundName)
-                            playHaptic(file: card.hapticName)
+                            if deck.gameMode == .sound {
+                                soundManager.playSound(sound: card.soundName)
+                            } else {
+                                soundManager.playSound(sound: "flip_\(Int.random(in: 0...1))")
+                            }
+
+                            if deck.gameMode == .haptic {
+                                playHaptic(file: card.hapticName)
+                            } else {
+                                UIImpactFeedbackGenerator().impactOccurred()
+                            }
 
                         }
                         .background(

@@ -4,10 +4,9 @@ struct CreditsView: View {
     @Binding var isPresented: Bool
 
     var body: some View {
-        Image(systemName: "info.circle.fill")
-            .resizable()
-            .scaledToFit()
-            .frame(width: 20)
+        Text("Credits")
+            .font(.footnote)
+            .foregroundStyle(.frost)
             .onTapGesture {
                 isPresented = true
             }
@@ -71,5 +70,5 @@ struct CreditsView: View {
 }
 
 #Preview {
-    CreditsView(isPresented: .constant(true))
+    CreditsView(isPresented: .constant(false))
 }

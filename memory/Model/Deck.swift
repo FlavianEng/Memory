@@ -4,7 +4,6 @@ enum GameMode {
     case classic, sound, haptic
 }
 
-// TODO: (Flavian) - Add the two differents other modes
 class Deck: ObservableObject {
     let isMultiplayer: Bool
     let gameMode: GameMode
@@ -17,8 +16,9 @@ class Deck: ObservableObject {
     @Published var isDealingCards = false
     @Published var newGameTimer: Double = 0
 
-    // TODO: (Flavian) - Create a best move count for each 1P. mode
-    @AppStorage("bestMoveCount") private var bestMoveCount = 0
+    @AppStorage("classicBestMoveCount") private var classicBestMoveCount = 0
+    @AppStorage("soundBestMoveCount") private var soundBestMoveCount = 0
+    @AppStorage("hapticBestMoveCount") private var hapticBestMoveCount = 0
 
     private var numberOfPairs: Int
 
@@ -47,7 +47,9 @@ class Deck: ObservableObject {
             if cards[index].isRevealed && cards[index].id != card.id {
                 canRevealCards = false
 
-                if cards[index].iconNumber == cards[chosenIndex].iconNumber {
+                if (gameMode == . classic && cards[index].iconNumber == cards[chosenIndex].iconNumber) ||
+                    (gameMode == .sound && cards[index].soundNumber == cards[chosenIndex].soundNumber) ||
+                    (gameMode == .haptic && cards[index].hapticNumber == cards[chosenIndex].hapticNumber) {
                     matchCards(index: index, chosenIndex: chosenIndex, soundManager: soundManager)
                     currentPlayer.incrementMoveCount()
                 }
@@ -59,6 +61,17 @@ class Deck: ObservableObject {
         cards[chosenIndex].isRevealed.toggle()
 
         checkMatchIsOver()
+    }
+
+    func getBestMove() -> Int {
+        switch gameMode {
+        case .classic:
+            return classicBestMoveCount
+        case .sound:
+            return soundBestMoveCount
+        case .haptic:
+            return hapticBestMoveCount
+        }
     }
 
     private func checkMatchIsOver() {
@@ -95,22 +108,43 @@ class Deck: ObservableObject {
     }
 
     // TODO: (Flavian) - Automatically get the max uniqueSoundsNumber
-    // TODO: (Flavian) - Adapt to handle different modes
     private func initDeck() {
-        var uniqueNumbers = Set<Int>()
-
-        while uniqueNumbers.count != numberOfPairs {
-            uniqueNumbers.insert(Int.random(in: 1...18))
-        }
+        let uniqueNumbers = getUniqueNumbers(mode: gameMode)
 
         cards = []
 
         uniqueNumbers.forEach { number in
-            cards.append(Card(iconNumber: number, soundNumber: number, hapticNumber: number))
-            cards.append(Card(iconNumber: number, soundNumber: number, hapticNumber: number))
+            cards.append(createCard(number: number))
+            cards.append(createCard(number: number))
         }
 
         cards = cards.shuffled()
+    }
+
+    private func createCard(number: Int) -> Card {
+        return Card(
+            iconNumber: gameMode == .classic ? number : Int.random(in: 1...18),
+            soundNumber: gameMode == .sound ? number : Int.random(in: 0...19),
+            hapticNumber: gameMode == .haptic ? number : Int.random(in: 0...19)
+        )
+    }
+
+    private func getUniqueNumbers(mode: GameMode) -> Set<Int> {
+        var uniqueNumbers = Set<Int>()
+        var range: ClosedRange<Int>
+
+        switch mode {
+        case .classic:
+            range = 1 ... 18
+        case .haptic, .sound:
+            range = 0 ... 19
+        }
+
+        while uniqueNumbers.count != numberOfPairs {
+            uniqueNumbers.insert(Int.random(in: range))
+        }
+
+        return uniqueNumbers
     }
 
     private func resetGame() {
@@ -162,8 +196,19 @@ class Deck: ObservableObject {
             return
         }
 
-        if player.moveCount < bestMoveCount || bestMoveCount == 0 {
-            bestMoveCount = player.moveCount
+        switch gameMode {
+        case .classic:
+            if player.moveCount < classicBestMoveCount || classicBestMoveCount == 0 {
+                classicBestMoveCount = player.moveCount
+            }
+        case .sound:
+            if player.moveCount < soundBestMoveCount || soundBestMoveCount == 0 {
+                soundBestMoveCount = player.moveCount
+            }
+        case .haptic:
+            if player.moveCount < hapticBestMoveCount || hapticBestMoveCount == 0 {
+                hapticBestMoveCount = player.moveCount
+            }
         }
     }
 

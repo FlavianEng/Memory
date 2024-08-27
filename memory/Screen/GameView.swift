@@ -25,8 +25,10 @@ struct GameView: View {
             .padding(.top, UIApplication.windowSafeAreaInsets.top)
 
             VStack(spacing: 0) {
-                MoveCounterView(player: deck.currentPlayer)
-                    .padding(.top, UIApplication.windowSafeAreaInsets.top)
+                if !deck.isMultiplayer {
+                    MoveCounterView(player: deck.currentPlayer, bestMove: deck.getBestMove())
+                        .padding(.top, UIApplication.windowSafeAreaInsets.top)
+                }
 
                 Spacer()
 
