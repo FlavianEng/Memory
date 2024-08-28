@@ -3,14 +3,7 @@ import SwiftUI
 struct CardView: View {
     let card: Card
     var canBeRevealed = true
-
-    var cardSize: CGFloat {
-        let baseWidth: CGFloat = 1179 // iPhone 15 Pro's width
-        let scalingFactor = UIScreen.main.bounds.size.width / baseWidth
-        let consistentSize = (baseWidth / 6) * scalingFactor
-
-        return consistentSize
-    }
+    var cardSize: CGFloat
 
     var body: some View {
         ZStack {
@@ -63,9 +56,9 @@ extension Image {
     deck.cards[1].isRevealed = true
 
     return Group {
-        CardView(card: deck.cards[0])
+        CardView(card: deck.cards[0], cardSize: 100)
             .scaleEffect(2.5)
-        CardView(card: deck.cards[1])
+        CardView(card: deck.cards[1], cardSize: 100)
             .padding(.top, 150)
             .scaleEffect(2.5)
     }

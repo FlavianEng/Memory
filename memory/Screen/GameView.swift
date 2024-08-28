@@ -49,6 +49,6 @@ struct GameView: View {
 }
 
 #Preview {
-    GameView(deck: Deck(mode: .classic, isMultiplayer: false, numberOfPairs: 4))
+    GameView(deck: Deck(mode: .classic, isMultiplayer: false, numberOfPairs: 12))
         .environmentObject(SoundManager())
 }
