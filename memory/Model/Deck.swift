@@ -189,6 +189,8 @@ class Deck: ObservableObject {
         for index in players.indices {
             players[index].moveCount = 0
         }
+
+        currentPlayer.moveCount = 0
     }
 
     private func saveBestMove(player: Player) {

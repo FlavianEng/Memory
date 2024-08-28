@@ -56,8 +56,8 @@
 		2D56750E2C7880A800667825 /* haptic_17.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D56750D2C7880A800667825 /* haptic_17.ahap */; };
 		2D5675122C78848F00667825 /* haptic_18.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5675112C78848F00667825 /* haptic_18.ahap */; };
 		2D5675142C78849700667825 /* haptic_19.ahap in Resources */ = {isa = PBXBuildFile; fileRef = 2D5675132C78849700667825 /* haptic_19.ahap */; };
-		2D6006932C7DFBC900C864C2 /* filp_0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D6006912C7DFBC900C864C2 /* filp_0.wav */; };
-		2D6006942C7DFBC900C864C2 /* filp_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D6006922C7DFBC900C864C2 /* filp_1.wav */; };
+		2D6006932C7DFBC900C864C2 /* flip_0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D6006912C7DFBC900C864C2 /* flip_0.wav */; };
+		2D6006942C7DFBC900C864C2 /* flip_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D6006922C7DFBC900C864C2 /* flip_1.wav */; };
 		2D99442D2C651DCB004F3A9D /* fail.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D9944282C651DCB004F3A9D /* fail.wav */; };
 		2D9944302C651DCB004F3A9D /* shuffle.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D99442B2C651DCB004F3A9D /* shuffle.wav */; };
 		2D9944312C651DCB004F3A9D /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D99442C2C651DCB004F3A9D /* success.wav */; };
@@ -128,8 +128,8 @@
 		2D56750D2C7880A800667825 /* haptic_17.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_17.ahap; sourceTree = "<group>"; };
 		2D5675112C78848F00667825 /* haptic_18.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_18.ahap; sourceTree = "<group>"; };
 		2D5675132C78849700667825 /* haptic_19.ahap */ = {isa = PBXFileReference; lastKnownFileType = text; path = haptic_19.ahap; sourceTree = "<group>"; };
-		2D6006912C7DFBC900C864C2 /* filp_0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = filp_0.wav; sourceTree = "<group>"; };
-		2D6006922C7DFBC900C864C2 /* filp_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = filp_1.wav; sourceTree = "<group>"; };
+		2D6006912C7DFBC900C864C2 /* flip_0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip_0.wav; sourceTree = "<group>"; };
+		2D6006922C7DFBC900C864C2 /* flip_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = flip_1.wav; sourceTree = "<group>"; };
 		2D9944282C651DCB004F3A9D /* fail.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fail.wav; sourceTree = "<group>"; };
 		2D99442B2C651DCB004F3A9D /* shuffle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shuffle.wav; sourceTree = "<group>"; };
 		2D99442C2C651DCB004F3A9D /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
@@ -288,8 +288,8 @@
 				2D5674CB2C77D26500667825 /* sound_17.wav */,
 				2D5674CC2C77D26500667825 /* sound_18.wav */,
 				2D5674B42C77D26400667825 /* sound_19.wav */,
-				2D6006912C7DFBC900C864C2 /* filp_0.wav */,
-				2D6006922C7DFBC900C864C2 /* filp_1.wav */,
+				2D6006912C7DFBC900C864C2 /* flip_0.wav */,
+				2D6006922C7DFBC900C864C2 /* flip_1.wav */,
 				2D9944282C651DCB004F3A9D /* fail.wav */,
 				2D99442B2C651DCB004F3A9D /* shuffle.wav */,
 				2D99442C2C651DCB004F3A9D /* success.wav */,
@@ -383,7 +383,7 @@
 				2D9944302C651DCB004F3A9D /* shuffle.wav in Resources */,
 				2D56750E2C7880A800667825 /* haptic_17.ahap in Resources */,
 				2D5675062C78808500667825 /* haptic_13.ahap in Resources */,
-				2D6006942C7DFBC900C864C2 /* filp_1.wav in Resources */,
+				2D6006942C7DFBC900C864C2 /* flip_1.wav in Resources */,
 				2D5674FE2C78806300667825 /* haptic_9.ahap in Resources */,
 				2D5674FC2C78805B00667825 /* haptic_8.ahap in Resources */,
 				2D5674E12C77D26500667825 /* sound_2.wav in Resources */,
@@ -406,7 +406,7 @@
 				2D32E3D22C62645F00E6163B /* Preview Assets.xcassets in Resources */,
 				2D32E3CF2C62645F00E6163B /* Assets.xcassets in Resources */,
 				2D5675042C78807F00667825 /* haptic_12.ahap in Resources */,
-				2D6006932C7DFBC900C864C2 /* filp_0.wav in Resources */,
+				2D6006932C7DFBC900C864C2 /* flip_0.wav in Resources */,
 				2D5674D32C77D26500667825 /* sound_3.wav in Resources */,
 				2D5674E52C77D26500667825 /* sound_18.wav in Resources */,
 				2D5674E42C77D26500667825 /* sound_17.wav in Resources */,

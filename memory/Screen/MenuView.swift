@@ -22,7 +22,7 @@ struct MenuView: View {
                         CreditsView(isPresented: $isCreditsDisplayed)
                     }
 
-                    //                    MultiplayerPicker(preselectedIndex: $isMultiplayer, options: ["1 Player", "2 Player"])
+                    // MultiplayerPicker(preselectedIndex: $isMultiplayer, options: ["1 Player", "2 Player"])
 
                     NavigationLink {
                         GameView(deck: Deck(
