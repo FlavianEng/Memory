@@ -23,7 +23,7 @@ struct MoveCounterView: View {
                     .fontWeight(.bold)
 
             }
-            .foregroundStyle(.yellow.opacity(0.8))
+            .foregroundStyle(.yellow)
             .font(.title3)
         }
     }

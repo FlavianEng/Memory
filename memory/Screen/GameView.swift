@@ -37,10 +37,14 @@ struct GameView: View {
 
                 Spacer()
             }
-            .blur(radius: deck.newGameTimer > 0 ? 4 : 0)
 
-            if deck.newGameTimer > 0 {
-                NewGameTimerView(deck: deck)
+            if deck.isEndGameDisplayed {
+                EndGameModal(
+                    isDisplayed: $deck.isEndGameDisplayed,
+                    currentScore: deck.currentPlayer.moveCount,
+                    bestScore: deck.getBestMove(),
+                    onCancel: { deck.saveBestMove(player: deck.currentPlayer); dismiss() },
+                    onPlayAgain: { deck.resetGame() })
             }
         }
         .ignoresSafeArea()
@@ -49,6 +53,6 @@ struct GameView: View {
 }
 
 #Preview {
-    GameView(deck: Deck(mode: .classic, isMultiplayer: false, numberOfPairs: 12))
+    GameView(deck: Deck(mode: .classic, isMultiplayer: false, numberOfPairs: 1))
         .environmentObject(SoundManager())
 }

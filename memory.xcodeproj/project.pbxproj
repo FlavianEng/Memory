@@ -14,7 +14,6 @@
 		2D32E3CD2C62645E00E6163B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32E3CC2C62645E00E6163B /* ContentView.swift */; };
 		2D32E3CF2C62645F00E6163B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D32E3CE2C62645F00E6163B /* Assets.xcassets */; };
 		2D32E3D22C62645F00E6163B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D32E3D12C62645F00E6163B /* Preview Assets.xcassets */; };
-		2D38A6DE2C73838000BC4C45 /* NewGameTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D38A6DD2C73838000BC4C45 /* NewGameTimerView.swift */; };
 		2D5674CD2C77D26500667825 /* sound_19.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674B42C77D26400667825 /* sound_19.wav */; };
 		2D5674CE2C77D26500667825 /* sound_0.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674B52C77D26400667825 /* sound_0.wav */; };
 		2D5674CF2C77D26500667825 /* sound_14.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2D5674B62C77D26400667825 /* sound_14.wav */; };
@@ -66,6 +65,7 @@
 		2DA776292C73E02300387B34 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA776282C73E02300387B34 /* CreditsView.swift */; };
 		2DB587142C7C70F8004726DC /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB587132C7C70F8004726DC /* GameView.swift */; };
 		2DB587162C7C73EF004726DC /* MultiplayerPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB587152C7C73EF004726DC /* MultiplayerPicker.swift */; };
+		2DD50E872C7F61EA005D3F64 /* EndGameModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD50E862C7F61EA005D3F64 /* EndGameModal.swift */; };
 		2DE74EEC2C7A451C000F510F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE74EEB2C7A451C000F510F /* BlurView.swift */; };
 		2DE74EF02C7B1468000F510F /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE74EEF2C7B1468000F510F /* UIApplicationExtension.swift */; };
 		2DEA9D4C2C626E1800D3E85A /* CardGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEA9D4B2C626E1800D3E85A /* CardGridView.swift */; };
@@ -86,7 +86,6 @@
 		2D32E3CE2C62645F00E6163B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D32E3D12C62645F00E6163B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2D32E3D82C62660900E6163B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		2D38A6DD2C73838000BC4C45 /* NewGameTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGameTimerView.swift; sourceTree = "<group>"; };
 		2D5674B42C77D26400667825 /* sound_19.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_19.wav; sourceTree = "<group>"; };
 		2D5674B52C77D26400667825 /* sound_0.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_0.wav; sourceTree = "<group>"; };
 		2D5674B62C77D26400667825 /* sound_14.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sound_14.wav; sourceTree = "<group>"; };
@@ -138,6 +137,7 @@
 		2DA776282C73E02300387B34 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		2DB587132C7C70F8004726DC /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		2DB587152C7C73EF004726DC /* MultiplayerPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerPicker.swift; sourceTree = "<group>"; };
+		2DD50E862C7F61EA005D3F64 /* EndGameModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameModal.swift; sourceTree = "<group>"; };
 		2DE74EEB2C7A451C000F510F /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		2DE74EEF2C7B1468000F510F /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		2DEA9D4B2C626E1800D3E85A /* CardGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGridView.swift; sourceTree = "<group>"; };
@@ -217,13 +217,13 @@
 				2DEA9D4B2C626E1800D3E85A /* CardGridView.swift */,
 				2DEA9D4E2C62729500D3E85A /* CardView.swift */,
 				2DFAACFD2C68B5F600BEB1E6 /* MoveCounterView.swift */,
-				2D38A6DD2C73838000BC4C45 /* NewGameTimerView.swift */,
 				2DA776282C73E02300387B34 /* CreditsView.swift */,
 				2D29B8E12C79D5D500CA6AD5 /* MenuItemView.swift */,
 				2D29B8E72C79F07100CA6AD5 /* MenuBackgroundView.swift */,
 				2DA1B9712C79FBD300D0DC9E /* InfiniteScrollerView.swift */,
 				2DE74EEB2C7A451C000F510F /* BlurView.swift */,
 				2DB587152C7C73EF004726DC /* MultiplayerPicker.swift */,
+				2DD50E862C7F61EA005D3F64 /* EndGameModal.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -466,7 +466,6 @@
 				2DFAACFE2C68B5F600BEB1E6 /* MoveCounterView.swift in Sources */,
 				2D29B8E02C79D5B800CA6AD5 /* MenuView.swift in Sources */,
 				2DEA9D4F2C62729500D3E85A /* CardView.swift in Sources */,
-				2D38A6DE2C73838000BC4C45 /* NewGameTimerView.swift in Sources */,
 				2DA1B9722C79FBD300D0DC9E /* InfiniteScrollerView.swift in Sources */,
 				2DB587162C7C73EF004726DC /* MultiplayerPicker.swift in Sources */,
 				2DB587142C7C70F8004726DC /* GameView.swift in Sources */,
@@ -474,6 +473,7 @@
 				2DA776292C73E02300387B34 /* CreditsView.swift in Sources */,
 				2DFAACFC2C68B53500BEB1E6 /* Player.swift in Sources */,
 				2D32E3CB2C62645E00E6163B /* MemoryApp.swift in Sources */,
+				2DD50E872C7F61EA005D3F64 /* EndGameModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

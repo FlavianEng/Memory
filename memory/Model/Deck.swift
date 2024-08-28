@@ -8,13 +8,13 @@ class Deck: ObservableObject {
     let isMultiplayer: Bool
     let gameMode: GameMode
 
-    @Published var players: [Player] = []
-    @Published var currentPlayer: Player = Player()
     @Published var canRevealCards = true
     @Published var cards: [Card]
+    @Published var currentPlayer: Player = Player()
     @Published var deckOpacity: Double = 1
     @Published var isDealingCards = false
-    @Published var newGameTimer: Double = 0
+    @Published var isEndGameDisplayed = false
+    @Published var players: [Player] = []
 
     @AppStorage("classicBestMoveCount") private var classicBestMoveCount = 0
     @AppStorage("soundBestMoveCount") private var soundBestMoveCount = 0
@@ -74,51 +74,53 @@ class Deck: ObservableObject {
         }
     }
 
+    func resetGame() {
+        saveBestMove(player: currentPlayer)
+        resetScores()
+        deckOpacity = 1
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.initDeck()
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.isDealingCards = true
+            self.deckOpacity = 1
+        }
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5 + Double(self.cards.count) * 0.2) {
+            self.isDealingCards = false
+            self.deckOpacity = 0
+        }
+    }
+
+    func saveBestMove(player: Player) {
+        guard !isMultiplayer else {
+            return
+        }
+
+        switch gameMode {
+        case .classic:
+            if player.moveCount < classicBestMoveCount || classicBestMoveCount == 0 {
+                classicBestMoveCount = player.moveCount
+            }
+        case .sound:
+            if player.moveCount < soundBestMoveCount || soundBestMoveCount == 0 {
+                soundBestMoveCount = player.moveCount
+            }
+        case .haptic:
+            if player.moveCount < hapticBestMoveCount || hapticBestMoveCount == 0 {
+                hapticBestMoveCount = player.moveCount
+            }
+        }
+    }
+
     private func checkMatchIsOver() {
         if cards.allSatisfy({$0.isMatched}) {
-            saveBestMove(player: currentPlayer)
-
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                self.resetGame()
-                self.resetScores()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.isEndGameDisplayed = true
             }
         }
-    }
-
-    private func hideCards(index: Int, chosenIndex: Int) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            if !self.cards[index].isMatched {
-                self.cards[index].isRevealed = false
-                self.cards[chosenIndex].isRevealed = false
-
-                self.currentPlayer.incrementMoveCount()
-            }
-
-            self.canRevealCards = true
-        }
-    }
-
-    private func matchCards(index: Int, chosenIndex: Int, soundManager: SoundManager) {
-        cards[index].isMatched = true
-        cards[chosenIndex].isMatched = true
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            soundManager.playSound(sound: "success")
-        }
-    }
-
-    // TODO: (Flavian) - Automatically get the max uniqueSoundsNumber
-    private func initDeck() {
-        let uniqueNumbers = getUniqueNumbers(mode: gameMode)
-
-        cards = []
-
-        uniqueNumbers.forEach { number in
-            cards.append(createCard(number: number))
-            cards.append(createCard(number: number))
-        }
-
-        cards = cards.shuffled()
     }
 
     private func createCard(number: Int) -> Card {
@@ -127,6 +129,14 @@ class Deck: ObservableObject {
             soundNumber: gameMode == .sound ? number : Int.random(in: 0...19),
             hapticNumber: gameMode == .haptic ? number : Int.random(in: 0...19)
         )
+    }
+
+    private func createPlayers() {
+        players = [Player()]
+
+        if isMultiplayer {
+            players.append(Player())
+        }
     }
 
     private func getUniqueNumbers(mode: GameMode) -> Set<Int> {
@@ -147,34 +157,39 @@ class Deck: ObservableObject {
         return uniqueNumbers
     }
 
-    private func resetGame() {
-        newGameTimer = 3
+    private func hideCards(index: Int, chosenIndex: Int) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            if !self.cards[index].isMatched {
+                self.cards[index].isRevealed = false
+                self.cards[chosenIndex].isRevealed = false
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.8) {
-            self.deckOpacity = 1
-        }
+                self.currentPlayer.incrementMoveCount()
+            }
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.1) {
-            self.initDeck()
-            self.newGameTimer = 0
-        }
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
-            self.isDealingCards = true
-            self.deckOpacity = 1
-        }
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5 + Double(self.cards.count) * 0.2) {
-            self.isDealingCards = false
-            self.deckOpacity = 0
+            self.canRevealCards = true
         }
     }
 
-    private func createPlayers() {
-        players = [Player()]
+    // TODO: (Flavian) - Automatically get the max uniqueSoundsNumber
+    private func initDeck() {
+        let uniqueNumbers = getUniqueNumbers(mode: gameMode)
 
-        if isMultiplayer {
-            players.append(Player())
+        cards = []
+
+        uniqueNumbers.forEach { number in
+            cards.append(createCard(number: number))
+            cards.append(createCard(number: number))
+        }
+
+        cards = cards.shuffled()
+    }
+
+    private func matchCards(index: Int, chosenIndex: Int, soundManager: SoundManager) {
+        cards[index].isMatched = true
+        cards[chosenIndex].isMatched = true
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            soundManager.playSound(sound: "success")
         }
     }
 
@@ -191,27 +206,6 @@ class Deck: ObservableObject {
         }
 
         currentPlayer.moveCount = 0
-    }
-
-    private func saveBestMove(player: Player) {
-        guard !isMultiplayer else {
-            return
-        }
-
-        switch gameMode {
-        case .classic:
-            if player.moveCount < classicBestMoveCount || classicBestMoveCount == 0 {
-                classicBestMoveCount = player.moveCount
-            }
-        case .sound:
-            if player.moveCount < soundBestMoveCount || soundBestMoveCount == 0 {
-                soundBestMoveCount = player.moveCount
-            }
-        case .haptic:
-            if player.moveCount < hapticBestMoveCount || hapticBestMoveCount == 0 {
-                hapticBestMoveCount = player.moveCount
-            }
-        }
     }
 
     private func setNumberOfPairs(numberOfPairs: Int) {
